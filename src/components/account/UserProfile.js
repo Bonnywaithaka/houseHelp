@@ -26,6 +26,9 @@ function UserProfile() {
 }}/>
         <Box>
            Info:
+           Name: Boniface Waithaka
+           Gender:Male
+           Nationaliy:Kenyan
         </Box>
     </UserData>
     <Divider />
