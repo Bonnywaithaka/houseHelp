@@ -51,7 +51,7 @@ const availability =[
 
 function HomePage() {
   return (
-    <Box sx={{width:"100vw",padding:"5px 50px", }}>
+    <Box sx={{width:"100vw",padding:"5px 20px", }}>
         <Grid container spacing={4} >
             <Grid item lg={12} xs={12} sm={12} md={12}>
  <Box>
