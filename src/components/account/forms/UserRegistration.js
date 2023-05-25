@@ -2,6 +2,8 @@ import {
   Box,
   Button,
   Grid,
+  Menu,
+  MenuItem,
   TextField,
   Typography,
   styled,
@@ -34,6 +36,24 @@ const RegistrationSchema = Yup.object().shape({
   phone: Yup.string().required("Please enter your phone number"),
   age: Yup.string().required("Please enter your age"),
 });
+const Nationalities = [
+  {
+    id: 1,
+    name: "Kenyan",
+  },
+  {
+    id: 2,
+    name: "Ugandan",
+  },
+  {
+    id: 3,
+    name: "Tanzanian",
+  },
+  {
+    id: 4,
+    name: "Ethiopian",
+  },
+];
 
 function UserRegistration() {
   return (
@@ -49,7 +69,7 @@ function UserRegistration() {
             email: "",
             nationality: "",
             phone: "",
-            age,
+            age: "",
           }}
           validationSchema={RegistrationSchema}
         >
@@ -133,7 +153,13 @@ function UserRegistration() {
                     error={!!errors.nationality && touched.nationality}
                     onBlur={handleBlur}
                     onChange={handleChange}
-                  />
+                  >
+                      {Nationalities.map((Nationality) => (
+                        <MenuItem key={Nationality.id} value={Nationality.id}>
+                          {Nationality.name}
+                        </MenuItem>
+                      ))}
+                  </TextField>
                 </Grid>
                 <Grid item xs={12} lg={6} md={6}>
                   <TextField
@@ -172,7 +198,7 @@ function UserRegistration() {
                     onChange={handleChange}
                   />
                 </Grid>
-                <Grid xs={12} lg={12} md={12}>
+                <Grid item xs={12} lg={12} md={12}>
                   <Button variant="contained">Register</Button>
                 </Grid>
               </Grid>
