@@ -18,12 +18,15 @@ const StyledMain = styled(Box)(() => ({
   width: "100vw",
   padding: 10,
 }));
-const StyledForm = styled(Box)(() => ({
+const StyledForm = styled(Box)(({ theme }) => ({
   display: "flex",
   padding: "20px 100px",
   border: "solid 1px #2cb34a",
   borderRadius: 10,
   margin: "20px 30px",
+  [theme.breakpoints.down("md")]: {
+    padding: "20px",
+  },
 }));
 
 const RegistrationSchema = Yup.object().shape({
@@ -154,11 +157,11 @@ function UserRegistration() {
                     onBlur={handleBlur}
                     onChange={handleChange}
                   >
-                      {Nationalities.map((Nationality) => (
-                        <MenuItem key={Nationality.id} value={Nationality.id}>
-                          {Nationality.name}
-                        </MenuItem>
-                      ))}
+                    {Nationalities.map((Nationality) => (
+                      <MenuItem key={Nationality.id} value={Nationality.id}>
+                        {Nationality.name}
+                      </MenuItem>
+                    ))}
                   </TextField>
                 </Grid>
                 <Grid item xs={12} lg={6} md={6}>
