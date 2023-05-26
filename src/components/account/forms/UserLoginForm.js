@@ -22,14 +22,14 @@ const StyledLoginBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  margin: "20px 40px",
+  margin: "20px 0px",
   padding: "64px 100px",
   borderRadius: 8,
   boxShadow:
     "4px -4px 8px rgba(0, 0, 0, 0.12), 4px 4px 8px rgba(0, 0, 0, 0.12)",
   backgroundColor: "#fff",
   [theme.breakpoints.down("md")]: {
-    padding: "10px 30px",
+    padding: "10px 20px",
   },
 }));
 const RegistrationSchema = Yup.object().shape({
