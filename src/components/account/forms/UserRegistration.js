@@ -8,6 +8,7 @@ import {
   Typography,
   styled,
 } from "@mui/material";
+import NextLink from "next/link";
 import React from "react";
 import { Formik, Form as FormikForm } from "formik";
 import * as Yup from "yup";
@@ -202,7 +203,11 @@ function UserRegistration() {
                   />
                 </Grid>
                 <Grid item xs={12} lg={12} md={12}>
-                  <Button variant="contained">Register</Button>
+                  <NextLink href="/login">
+                    <Button variant="contained" fullWidth>
+                      Submit
+                    </Button>
+                  </NextLink>
                 </Grid>
               </Grid>
             </FormikForm>
