@@ -7,6 +7,7 @@ import {
   TextField,
   Typography,
   styled,
+  useTheme,
 } from "@mui/material";
 import NextLink from "next/link";
 import React from "react";
@@ -21,14 +22,23 @@ const StyledMain = styled(Box)(() => ({
 }));
 const StyledForm = styled(Box)(({ theme }) => ({
   display: "flex",
+  flexDirection: "column",
   padding: "20px 100px",
   border: "solid 1px #2cb34a",
   borderRadius: 10,
   margin: "20px 30px",
+  boxShadow:
+    "4px -4px 8px rgba(0, 0, 0, 0.12), 4px 4px 8px rgba(0, 0, 0, 0.12)",
+  backgroundColor: "#fff",
   [theme.breakpoints.down("md")]: {
     padding: "20px",
   },
 }));
+const StyledHeaderText = styled(Typography)(({theme})=>({
+  [theme.breakpoints.down("down")]:{
+    
+  }
+}))
 
 const RegistrationSchema = Yup.object().shape({
   firstName: Yup.string().required("Please enter your first name"),
@@ -62,10 +72,12 @@ const Nationalities = [
 function UserRegistration() {
   return (
     <StyledMain>
-      <Box>
-        <Typography variant="h4">Register Account</Typography>
-      </Box>
       <StyledForm>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Typography variant="h4" color="#2b34ac">
+            Register Account
+          </Typography>
+        </Box>
         <Formik
           initialValues={{
             firstName: "",

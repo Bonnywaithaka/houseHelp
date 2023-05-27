@@ -8,6 +8,7 @@ import {
   styled,
 } from "@mui/material";
 import React from "react";
+import  NextLink  from "next/link";
 
 const StyledProfileCard = styled(Box)(() => ({
   display: "flex",
@@ -59,9 +60,12 @@ function ProfileCard({ name, age, phone, homeTown, nationality, profile }) {
           <Typography>Nationality: {nationality}</Typography>
         </StyledCardContent>
         <StyledCardActionsArea>
-          <Button size="small" variant="contained">
-            View Profile
-          </Button>
+          <NextLink href="/my-account">
+            <Button size="small" variant="contained">
+              View Profile
+            </Button>
+          </NextLink>
+
           <Button size="small" variant="outlined">
             {" "}
             Message
