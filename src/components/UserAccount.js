@@ -18,12 +18,16 @@ const StyledMain = styled(Box)(({ theme }) => ({
   width: "100vw",
   height: "100vh",
   display: "flex",
-  padding: 10,
+  padding: 50,
+  margin: 0,
   backgroundImage: `url("/assets/profilebackground.jpg")`,
   backgroundPosition: `right bottom`,
   backgroundRepeat: `no-repeat`,
   backgroundSize: `cover`,
   borderRadius: 5,
+  [theme.breakpoints.down("md")]: {
+    padding: 5,
+  },
 }));
 function UserAccount() {
   return (
@@ -39,7 +43,7 @@ function UserAccount() {
             >
               <Box
                 sx={{
-                  height: "70%",
+                  minHeight: "70%",
                   width: "100%",
                   display: "flex",
                   justifyContent: "flex-start",
@@ -60,28 +64,30 @@ function UserAccount() {
                   </Typography>
                 </Divider>
               </Box>
-              <Box>
-                <Typography variant="h3" fontSize={20} color="#fff">
-                  Boniface Onyango
-                </Typography>
-              </Box>
-              <Divider />
-              <Box>
-                <Typography color="#fff">
-                  Email: bonnywaithaka@outlook.com
-                </Typography>
-              </Box>
-              <Divider />
-              <Box>
-                <Typography color="#fff">Phone: +254700 000 000</Typography>
-              </Box>
-              <Divider />
-              <Box>
-                <Typography color="#fff">Age: 20 Years</Typography>
-              </Box>
-              <Divider />
-              <Box>
-                <Typography color="#fff">Gender: Male</Typography>
+              <Box sx={{ overflow: "auto", height: "60%" }}>
+                <Box>
+                  <Typography variant="h3" fontSize={20} color="#fff">
+                    Boniface Onyango
+                  </Typography>
+                </Box>
+                <Divider />
+                <Box>
+                  <Typography color="#fff">
+                    Email: bonnywaithaka@outlook.com
+                  </Typography>
+                </Box>
+                <Divider />
+                <Box>
+                  <Typography color="#fff">Phone: +254700 000 000</Typography>
+                </Box>
+                <Divider />
+                <Box>
+                  <Typography color="#fff">Age: 20 Years</Typography>
+                </Box>
+                <Divider />
+                <Box>
+                  <Typography color="#fff">Gender: Male</Typography>
+                </Box>
               </Box>
             </Card>
           </Box>
