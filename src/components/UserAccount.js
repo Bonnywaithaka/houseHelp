@@ -53,7 +53,11 @@ function UserAccount() {
                   alt="user"
                   sx={{ width: 60, height: 60 }}
                 />
-                <Typography variant="h4">Profile</Typography>
+                <Divider component="div" role="presentation">
+                  <Typography variant="h5" color="#fff">
+                    Profile{" "}
+                  </Typography>
+                </Divider>
               </Box>
               <Box>
                 <Typography variant="h3" fontSize={20} color="#fff">
@@ -106,9 +110,11 @@ function UserAccount() {
                     alt="green iguana"
                   /> */}
                   <CardContent>
-                    <Typography variant="h5" color="#fff">
-                      Experience
-                    </Typography>
+                    <Divider component="div" role="presentation">
+                      <Typography variant="h5" color="#fff">
+                        Experience
+                      </Typography>
+                    </Divider>
                   </CardContent>
                 </CardActionArea>
               </Card>
@@ -127,9 +133,12 @@ function UserAccount() {
                     alt="green iguana"
                   /> */}
                   <CardContent>
-                    <Typography variant="h5" color="#fff">
-                      Reports
-                    </Typography>
+                    <Divider component="div" role="presentation">
+                      <Typography variant="h5" color="#fff">
+                        Reports
+                      </Typography>
+                    </Divider>
+
                     <Box>
                       <Typography variant="h6" color="#fff">
                         Positive
