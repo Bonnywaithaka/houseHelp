@@ -5,6 +5,7 @@ import {
   Button,
   Card,
   CardActionArea,
+  CardActions,
   CardContent,
   CardMedia,
   Divider,
@@ -18,7 +19,7 @@ const StyledMain = styled(Box)(({ theme }) => ({
   width: "100vw",
   height: "100vh",
   display: "flex",
-  padding: 50,
+  padding: "10px 50px",
   margin: 0,
   backgroundImage: `url("/assets/profilebackground.jpg")`,
   backgroundPosition: `right bottom`,
@@ -64,7 +65,7 @@ function UserAccount() {
                   </Typography>
                 </Divider>
               </Box>
-              <Box sx={{ overflow: "auto", height: "60%" }}>
+              <Box sx={{ overflow: "auto", height: "60%", padding: 2 }}>
                 <Box>
                   <Typography variant="h3" fontSize={20} color="#fff">
                     Boniface Onyango
@@ -138,29 +139,28 @@ function UserAccount() {
                         Reports
                       </Typography>
                     </Divider>
-
-                    <Box>
-                      <Typography variant="h6" color="#fff">
-                        Positive
-                      </Typography>
-                      <Button variant="contained" size="small" color="primary">
-                        20
-                      </Button>
-                    </Box>
-                    <Box>
-                      <Typography variant="h6" color="#fff">
-                        Negative
-                      </Typography>
-                      <Button
-                        variant="contained"
-                        size="small"
-                        color="secondary"
-                      >
-                        0
-                      </Button>
-                    </Box>
                   </CardContent>
                 </CardActionArea>
+                <CardActions
+                  sx={{ display: "flex", justifyContent: "space-evenly" }}
+                >
+                  <Box>
+                    <Typography variant="h6" color="#fff">
+                      Positive
+                    </Typography>
+                    <Button variant="contained" size="small" color="primary">
+                      20
+                    </Button>
+                  </Box>
+                  <Box>
+                    <Typography variant="h6" color="#fff">
+                      Negative
+                    </Typography>
+                    <Button variant="contained" size="small" color="secondary">
+                      0
+                    </Button>
+                  </Box>
+                </CardActions>
               </Card>
             </Box>
           </Box>
