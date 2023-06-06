@@ -1,6 +1,16 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { Avatar, Card, Divider, Grid, Typography } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Divider,
+  Grid,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 
 function UserAccount() {
@@ -20,7 +30,7 @@ function UserAccount() {
         overlay: "rgba(0, 0, 0, 1)",
       }}
     >
-      <Grid container spacing={4}>
+      <Grid container spacing={0.5}>
         <Grid item lg={6} xl={6} md={6} sm={6} xs={12}>
           <Box sx={{ height: "100%", margin: 2 }}>
             <Card
@@ -87,7 +97,21 @@ function UserAccount() {
             >
               <Card
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.8)", height: "100%" }}
-              ></Card>
+              >
+                <CardActionArea>
+                  {/* <CardMedia
+                    component="img"
+                    height="250"
+                    image="/assets/redwolf.jpg"
+                    alt="green iguana"
+                  /> */}
+                  <CardContent>
+                    <Typography variant="h5" color="#fff">
+                      Experience
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
             </Box>
             <Box
               sx={{ width: "100%", height: "50%", padding: "10px 0px 0px 0px" }}
@@ -95,7 +119,35 @@ function UserAccount() {
               <Card
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.8)", height: "100%" }}
               >
-                Test card 3
+                <CardActionArea>
+                  {/* <CardMedia
+                    component="img"
+                    height="250"
+                    image="/assets/redwolf.jpg"
+                    alt="green iguana"
+                  /> */}
+                  <CardContent>
+                    <Typography variant="h5" color="#fff">
+                      Reports
+                    </Typography>
+                    <Box>
+                      <Typography variant="h6" color="#fff">
+                        Positive
+                      </Typography>
+                      <Button variant="contained" size="small">
+                        0
+                      </Button>
+                    </Box>
+                    <Box>
+                      <Typography variant="h6" color="#fff">
+                        Negative
+                      </Typography>
+                      <Button variant="contained" size="small">
+                        0
+                      </Button>
+                    </Box>
+                  </CardContent>
+                </CardActionArea>
               </Card>
             </Box>
           </Box>
