@@ -10,31 +10,32 @@ import {
   Divider,
   Grid,
   Typography,
+  styled,
 } from "@mui/material";
 import Image from "next/image";
 
+const StyledMain = styled(Box)(({ theme }) => ({
+  width: "100vw",
+  height: "100vh",
+  display: "flex",
+  padding: 10,
+  backgroundImage: `url("/assets/profilebackground.jpg")`,
+  backgroundPosition: `right bottom`,
+  backgroundRepeat: `no-repeat`,
+  backgroundSize: `cover`,
+  borderRadius: 5,
+}));
 function UserAccount() {
   return (
-    <Box
-      sx={{
-        width: "90vw",
-        height: "90vh",
-        backgroundColor: "white",
-        display: "flex",
-        padding: 5,
-        backgroundImage: `url("/assets/profilebackground.jpg")`,
-        backgroundPosition: `right bottom`,
-        backgroundRepeat: `no-repeat`,
-        backgroundSize: `cover`,
-        borderRadius: 5,
-        overlay: "rgba(0, 0, 0, 1)",
-      }}
-    >
-      <Grid container spacing={0.5}>
+    <StyledMain>
+      <Grid container spacing={2}>
         <Grid item lg={6} xl={6} md={6} sm={6} xs={12}>
-          <Box sx={{ height: "100%", margin: 2 }}>
+          <Box sx={{ height: "100%" }}>
             <Card
-              sx={{ backgroundColor: "rgba(0, 0, 0, 0.8)", height: "100%" }}
+              sx={{
+                backgroundColor: "rgba(0, 0, 0, 0.8)",
+                height: "100%",
+              }}
             >
               <Box
                 sx={{
@@ -55,7 +56,7 @@ function UserAccount() {
                 />
                 <Divider component="div" role="presentation">
                   <Typography variant="h5" color="#fff">
-                    Profile{" "}
+                    Profile
                   </Typography>
                 </Divider>
               </Box>
@@ -93,7 +94,6 @@ function UserAccount() {
               backgroundColor: "unset",
               display: "flex",
               flexDirection: "column",
-              margin: 2,
             }}
           >
             <Box
@@ -126,12 +126,6 @@ function UserAccount() {
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.8)", height: "100%" }}
               >
                 <CardActionArea>
-                  {/* <CardMedia
-                    component="img"
-                    height="250"
-                    image="/assets/redwolf.jpg"
-                    alt="green iguana"
-                  /> */}
                   <CardContent>
                     <Divider component="div" role="presentation">
                       <Typography variant="h5" color="#fff">
@@ -143,15 +137,19 @@ function UserAccount() {
                       <Typography variant="h6" color="#fff">
                         Positive
                       </Typography>
-                      <Button variant="contained" size="small">
-                        0
+                      <Button variant="contained" size="small" color="primary">
+                        20
                       </Button>
                     </Box>
                     <Box>
                       <Typography variant="h6" color="#fff">
                         Negative
                       </Typography>
-                      <Button variant="contained" size="small">
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="secondary"
+                      >
                         0
                       </Button>
                     </Box>
@@ -162,7 +160,7 @@ function UserAccount() {
           </Box>
         </Grid>
       </Grid>
-    </Box>
+    </StyledMain>
   );
 }
 
