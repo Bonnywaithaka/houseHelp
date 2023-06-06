@@ -60,7 +60,7 @@ function ProfileCard({ name, age, phone, homeTown, nationality, profile }) {
           <Typography>Nationality: {nationality}</Typography>
         </StyledCardContent>
         <StyledCardActionsArea>
-          <NextLink href="/my-account">
+          <NextLink href="/user/user-account">
             <Button size="small" variant="contained">
               View Profile
             </Button>

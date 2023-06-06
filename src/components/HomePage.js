@@ -80,7 +80,12 @@ function HomePage() {
               </Box>
             </Box>
             <Box sx={{ width: "90vw", margin: 2 }}>
-              <TextField label="search" placeholder="serach for a house help" />
+              <TextField
+                label="search"
+                placeholder="serach for a house help"
+                fullWidth
+                maxWidth="md"
+              />
             </Box>
           </Box>
           <Divider />
