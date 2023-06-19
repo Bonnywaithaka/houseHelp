@@ -8,7 +8,7 @@ import {
   styled,
 } from "@mui/material";
 import React from "react";
-import  NextLink  from "next/link";
+import NextLink from "next/link";
 
 const StyledProfileCard = styled(Box)(() => ({
   display: "flex",
@@ -44,7 +44,15 @@ const StyledCardActionsArea = styled(Box)(() => ({
   backgroundColor: "#fff",
   maxWidth: "100vw",
 }));
-function ProfileCard({ name, age, phone, homeTown, nationality, profile }) {
+function ProfileCard({
+  name,
+  age,
+  phone,
+  homeTown,
+  nationality,
+  profile,
+  profileId,
+}) {
   return (
     <StyledProfileCard sx={{}}>
       <Box>
@@ -60,7 +68,7 @@ function ProfileCard({ name, age, phone, homeTown, nationality, profile }) {
           <Typography>Nationality: {nationality}</Typography>
         </StyledCardContent>
         <StyledCardActionsArea>
-          <NextLink href="/user/user-account">
+          <NextLink href={`/user/${profileId}`}>
             <Button size="small" variant="contained">
               View Profile
             </Button>

@@ -1,10 +1,11 @@
-import { Box, Button, TextField, Typography, styled } from "@mui/material";
+import { Box } from "@mui/material";
 import Head from "next/head";
 import React from "react";
 import styles from "@/styles/Home.module.css";
 import UserRegistration from "../components/account/forms/UserRegistration";
+import StepperRegistrationForm from "../components/account/forms/StepperRegistrationForm";
 
-function login() {
+function Register() {
   return (
     <>
       <Head>
@@ -13,11 +14,12 @@ function login() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main}`}>
+      <Box>
         <UserRegistration />
-      </main>
+        {/* <StepperRegistrationForm /> */}
+      </Box>
     </>
   );
 }
 
-export default login;
+export default Register;
